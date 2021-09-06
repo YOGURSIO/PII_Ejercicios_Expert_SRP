@@ -49,6 +49,6 @@ namespace Library
             return stringBuilder.ToString();
         }
 
-        /*Para que siga el SRP se tendria que hacer una clase para el paciente otra para el doctor, y para la verificacion se puede hacer mismo en los sets o, una clase verificadora, cosa que dejaria mas recalcado el SRP */
+        /*Para que siga el SRP se tendria que hacer una clase para el paciente otra para el doctor, y para la verificacion se puede hacer mismo en los sets o, una clase verificadora, en clase de usar una clase que verifique me parece que se vuelve mas complicado ya que si queremos modificar la clase persona tambien habria que nodificar la clase modificadora */
     }
 }
