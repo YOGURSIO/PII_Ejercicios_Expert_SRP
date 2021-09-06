@@ -5,49 +5,23 @@ namespace Library
 {
     public class AppointmentService
     {
-        public static string CreateAppointment(string name, string id, string phoneNumber, DateTime date, string appoinmentPlace, string doctorName)
+        
+        public static Boolean isValid = true;
+        public static int identificador = 0;
+       
+        public static void CreateAppointment(DateTime date, Doctor doctor, Persona persona)
         {
-            StringBuilder stringBuilder = new StringBuilder("Scheduling appointment...\n");
-            Boolean isValid = true;
-
-            if (string.IsNullOrEmpty(name))
+            if (isValid == true)
             {
-                stringBuilder.Append("Unable to schedule appointment, Name is required\n");
-                isValid = false;
+                identificador++;
+                Console.WriteLine($"Your appointment was successfully scheduled, your identification code is {identificador}");
+                
             }
-
-            if (string.IsNullOrEmpty(id))
+            else
             {
-                stringBuilder.Append("Unable to schedule appointment, id is required\n");
-                isValid = false;
+                Console.WriteLine($"Your appointment could not be scheduled");
             }
-
-            if (string.IsNullOrEmpty(phoneNumber))
-            {
-                stringBuilder.Append("Unable to schedule appointment, Phone number is required\n");
-                isValid = false;
-            }
-
-            if (string.IsNullOrEmpty(appoinmentPlace))
-            {
-                stringBuilder.Append("Unable to schedule appointment, Appoinment place is required\n");
-                isValid = false;
-            }
-
-            
-            if (string.IsNullOrEmpty(doctorName))
-            {
-                stringBuilder.Append("Unable to schedule appointment, Doctor name is required\n");
-                isValid = false;
-            }
-
-            if (isValid)
-            {
-                stringBuilder.Append("Appoinment Scheduled");
-            }
-
-            return stringBuilder.ToString();
         }
-
+        
     }
 }
