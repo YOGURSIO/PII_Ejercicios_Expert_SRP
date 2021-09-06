@@ -49,5 +49,6 @@ namespace Library
             return stringBuilder.ToString();
         }
 
+        /*Para que siga el SRP se tendria que hacer una clase para el paciente otra para el doctor, y para la verificacion se puede hacer mismo en los sets o, una clase verificadora, cosa que dejaria mas recalcado el SRP */
     }
 }

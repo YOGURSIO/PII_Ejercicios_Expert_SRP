@@ -23,6 +23,9 @@ namespace SRP
             this.SectorBiblioteca = sector;
             this.EstanteBiblioteca = estante;
         }
-
+        /* Esto no cumple con el SRP ya que el SectorBiblioteca y EstanteBiblioteca no tiene 
+        sentido que formen parte de la Class Libro, para que cumpla el SRP tendria que haber 
+        una clase Biblioteca, por ejemplo, donde este esta informacion 
+        */
     }
 }
